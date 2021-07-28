@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /app.js
+    destination: /home/ubuntu/node-express-realworld-example-app
+hooks:
+  AfterInstall:
+    - location: scripts/a_install.sh
+      timeout: 300
+      runas: root
