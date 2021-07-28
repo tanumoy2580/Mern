@@ -1,0 +1,14 @@
+version: 0.2
+
+env:
+   parameter-store:
+           DB_HOST: "/Tanumoy/db_host"
+
+phases:
+    build:
+        commands:
+            - sed -i 's/13.233.25.181:27017/'$DB_HOST'/' app.js
+
+artifacts:
+        files:
+           - '**/*'
